@@ -850,7 +850,7 @@ document.addEventListener("keydown", function(e) {
 
 // Group selection functions
 function toggleGroup(groupName) {
-    let group = GROUPS[groupName];
+    let group = group[groupName];
     if (!group) return;
     
     let groupCheckbox = document.querySelector(`.group-check[data-group="${groupName}"]`);
