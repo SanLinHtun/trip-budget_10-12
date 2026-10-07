@@ -150,7 +150,7 @@ function editCell(cell) {
 
     if (field === 'buyer') {
         // Show dropdown for buyer
-        let names = ["Yan Naung", "Theint", "Arkar", "Yamin", "Ko San", "Aung Zaw Lin", "Ko Kaung", "Zayar Phyo", "Thel Thel Nu", "Khaing Su Mon", "Khaing Su Mon's BF", "Myo Pa", "May Zon Thu", "May Zon Thu's BF"];
+        let names = ["San Lin Htun","Nandar Moe Thae", "Ko Pyae Sone", "Htet Htet Aung", "Aung Myo Thet", "Shinn Bhone Myat", "Aye Pyae Pyae Phyoe", "Aung Thila", "Hnin Aye Wai", "Ko Chan Nyein Tun", "Ma Phue", "Nandar Lay", "Kyaw Gyi"];
         let select = document.createElement('select');
         select.className = 'inline-edit';
         select.innerHTML = '<option value="">— Select —</option>';
