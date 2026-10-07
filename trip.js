@@ -1,6 +1,10 @@
 let expenses = [];
 let accumulatedRemainder = 0; // Track accumulated remainder from previous calculations
-const ALL_NAMES = ["San Lin Htun","Nandar Moe Thae", "Ko Pyae Sone", "Htet Htet Aung", "Aung Myo Thet", "Shinn Bhone Myat", "Aye Pyae Pyae Phyoe", "Aung Thila", "Hnin Aye Wai", "Ko Chan Nyein Tun", "Ma Phue", "Nandar Lay", "Kyaw Gyi"];
+const ALL_NAMES = ["San Lin Htun", "Nandar Moe Thae", "Ko Pyae Sone", "Htet Htet Aung", "Aung Myo Thet", "Shinn Bhone Myat", "Aye Pyae Pyae Phyoe", "Aung Thila", "Hnin Aye Wai", "Ko Chan Nyein Tun", "Ma Phue", "Nandar Lay", "Kyaw Gyi"];
+
+const GROUPS = {
+    all: ALL_NAMES
+};
 
 // Load expenses from server
 async function loadExpenses() {
@@ -850,7 +854,7 @@ document.addEventListener("keydown", function(e) {
 
 // Group selection functions
 function toggleGroup(groupName) {
-    let group = group[groupName];
+    let group = GROUPS[groupName];
     if (!group) return;
     
     let groupCheckbox = document.querySelector(`.group-check[data-group="${groupName}"]`);
