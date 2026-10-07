@@ -1,14 +1,6 @@
 let expenses = [];
 let accumulatedRemainder = 0; // Track accumulated remainder from previous calculations
-const ALL_NAMES = ["Yan Naung", "Theint", "Arkar", "Yamin", "Ko San", "Aung Zaw Lin", "Ko Kaung", "Zayar Phyo", "Thel Thel Nu", "Khaing Su Mon", "Khaing Su Mon's BF", "Myo Pa", "May Zon Thu", "May Zon Thu's BF"];
-
-const GROUPS = {
-    takashimadaira: ["Yan Naung", "Theint", "Arkar", "Yamin", "Ko San", "Aung Zaw Lin", "Ko Kaung"],
-    zayar: ["Zayar Phyo"],
-    shinagawa: ["Khaing Su Mon", "Khaing Su Mon's BF", "Myo Pa", "May Zon Thu", "May Zon Thu's BF"],
-    thel: ["Thel Thel Nu"],
-    all: ALL_NAMES
-};
+const ALL_NAMES = ["San Lin Htun","Nandar Moe Thae", "Ko Pyae Sone", "Htet Htet Aung", "Aung Myo Thet", "Shinn Bhone Myat", "Aye Pyae Pyae Phyoe", "Aung Thila", "Hnin Aye Wai", "Ko Chan Nyein Tun", "Ma Phue", "Nandar Lay", "Kyaw Gyi"];
 
 // Load expenses from server
 async function loadExpenses() {
