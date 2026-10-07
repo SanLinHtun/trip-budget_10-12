@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/expenses",
+      "destination": "/api/expenses.js"
+    },
+    {
+      "source": "/api/expenses/:id",
+      "destination": "/api/expenses/[id].js"
+    }
+  ]
+}
