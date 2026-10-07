@@ -44,8 +44,7 @@ A trip budget management app for splitting expenses among group members.
 
 ## Deployment
 
-Deployed on Vercel: https://tripbudget-sand.vercel.app
-
+Deployed on Vercel: https://trip-budget-10-12-git-main-slh13.vercel.app/
 ## License
 
 Private
