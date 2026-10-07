@@ -1,6 +1,6 @@
 let expenses = [];
 let accumulatedRemainder = 0; // Track accumulated remainder from previous calculations
-const ALL_NAMES = ["San Lin Htun", "Nandar Moe Thae", "Ko Pyae Sone", "Htet Htet Aung", "Aung Myo Thet", "Shinn Bhone Myat", "Aye Pyae Pyae Phyoe", "Aung Thila", "Hnin Aye Wai", "Ko Chan Nyein Tun", "Ma Phue", "Nandar Lay", "Kyaw Gyi"];
+const ALL_NAMES = ["San Lin Htun", "Nandar Moe Thae", "Ko Pyae Sone", "Htet Htet Aung", "Aung Myo Thet", "Shinn Bhone Myat", "Aye Pyae Pyae Phyo", "Aung Thila", "Hnin Aye Wai", "Ko Chan Nyein Tun", "Ma Phue", "Nandar Lay", "Kyaw Gyi"];
 
 const GROUPS = {
     all: ALL_NAMES
@@ -154,7 +154,7 @@ function editCell(cell) {
 
     if (field === 'buyer') {
         // Show dropdown for buyer
-        let names = ["San Lin Htun","Nandar Moe Thae", "Ko Pyae Sone", "Htet Htet Aung", "Aung Myo Thet", "Shinn Bhone Myat", "Aye Pyae Pyae Phyoe", "Aung Thila", "Hnin Aye Wai", "Ko Chan Nyein Tun", "Ma Phue", "Nandar Lay", "Kyaw Gyi"];
+        let names = ["San Lin Htun","Nandar Moe Thae", "Ko Pyae Sone", "Htet Htet Aung", "Aung Myo Thet", "Shinn Bhone Myat", "Aye Pyae Pyae Phyo", "Aung Thila", "Hnin Aye Wai", "Ko Chan Nyein Tun", "Ma Phue", "Nandar Lay", "Kyaw Gyi"];
         let select = document.createElement('select');
         select.className = 'inline-edit';
         select.innerHTML = '<option value="">— Select —</option>';
