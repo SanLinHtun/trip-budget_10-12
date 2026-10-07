@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="trip.css">
+</head>
+<body>
+    <h2>Trip Budget: 10/11(日)</h2>
+    
+    <div class="input-group">
+        <input type="text" id="item" placeholder="Item Name" autofocus>
+        <input type="number" id="price" placeholder="Price (¥)" min="0">
+        <select id="buyer">
+            <option value="">— Select Buyer —</option>
+            <option value="San Lin Htun">San Lin Htun</option>
+            <option value="Ko Chan Nyein Htun">Ko Chan Nyein Htun</option>
+            <option value="Ma Phue">Ma Phue</option>
+            <option value="Aung Thila">Aung Thila</option>
+            <option value="Hnin Aye Wai">Hnin Aye Wai</option>
+            <option value="Nandar Lay">Nandar Lay</option>
+            <option value="Kyaw Gyi">Kyaw Gyi</option>
+            <option value="Htet Htet Aung">Htet Htet Aung</option>
+            <option value="Aung Myo Thet">Aung Myo Thet</option>
+            <option value="Nandar Moe Thae">Nandar Moe Thae</option>
+            <option value="Ko Pyae Sone">Ko Pyae Sone</option>
+            <option value="Shinn Bhone Myat">Shinn Bhone Myat</option>
+            <option value="Aye Pyae Pyae Phyo">Aye Pyae Pyae Phyo</option>
+        </select>
+    </div>
+
+    <div class="sharing-section">
+        <div class="sharing-header">
+            <h4>Share with (select group or individuals):</h4>
+            <button type="button" class="toggle-members" onclick="toggleMembers()" id="toggleMembersBtn">▼</button>
+        </div>
+        <div class="group-checkboxes">
+            <label><input type="checkbox" class="group-check" data-group="all" onclick="toggleGroup('all')"> All Members (13)</label>
+        </div>
+        <div class="member-checkboxes" id="memberCheckboxes">
+            <label><input type="checkbox" class="member-check" value="San Lin Htun"> San Lin Htun</label>
+            <label><input type="checkbox" class="member-check" value="Nandar Moe Thae"> Nandar Moe Thae</label>
+            <label><input type="checkbox" class="member-check" value="Ko Pyae Sone"> Ko Pyae Sone</label>
+            <label><input type="checkbox" class="member-check" value="Htet Htet Aung"> Htet Htet Aung</label>
+            <label><input type="checkbox" class="member-check" value="Aung Myo Thet"> Aung Myo Thet</label>
+            <label><input type="checkbox" class="member-check" value="Shinn Bhone Myat"> Shinn Bhone Myat</label>
+            <label><input type="checkbox" class="member-check" value="Aye Pyae Pyae Phyo"> Aye Pyae Pyae Phyo</label>
+            <label><input type="checkbox" class="member-check" value="Aung Thila"> Aung Thila</label>
+            <label><input type="checkbox" class="member-check" value="Hnin Aye Wai"> Hnin Aye Wai</label>
+            <label><input type="checkbox" class="member-check" value="Ko Chan Nyein Tun"> Ko Chan Nyein Tun</label>
+            <label><input type="checkbox" class="member-check" value="Ma Phue"> Ma Phue</label>
+            <label><input type="checkbox" class="member-check" value="Nandar Lay"> Nandar Lay</label>
+            <label><input type="checkbox" class="member-check" value="Kyaw Gyi"> Kyaw Gyi</label>
+        </div>
+    </div>
+
+    <div class="action-buttons">
+        <button onclick="addItem()">Add Item</button>
+        <button class="btn-clear" onclick="clearInputs()">Clear</button>
+        <button class="btn-export" onclick="downloadPDF()">📄 Download Pay Slip</button>
+    </div>
+
+    <table id="budgetTable">
+        <tr><th>Item</th><th>Price</th><th>By</th><th></th></tr>
+    </table>
+    
+    <div class="summary">
+        <h3>Total Spent: <span id="total">0</span> ¥</h3>
+        <div id="perPerson"></div>
+    </div>
+
+    <h3>Settlement Summary</h3>
+    <table id="settlementTable">
+        <tr><th>Name</th><th>Share of Expenses (¥)</th><th>Spent (¥)</th><th>Balance (¥)</th><th>Payslip</th></tr>
+    </table>
+    <p class="settlement-note">Average share = Total spent ÷ 14 people. Negative balance means they owe money.</p>
+
+    <script src="trip.js?v=7"></script>
+</body>
+</html>
